@@ -3,27 +3,27 @@ var makeBatmanDancer = function(top, left, timeBetweenSteps, className) {
   
   this.oldStep = this.step;
 
-  this.left = true;
+  this.move = true;
   this.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
     this.oldStep();
 
 
-    if (this.left) {
+    if (this.move) {
       this.$node.animate({
-        top: '+=10%'
+        left: '+=10%'
       });
     } else {
       this.$node.animate({
-        top: '-=10%'
+        left: '-=10%'
       });
     }
-    this.left = !this.left;
+    this.move = !this.move;
   };
 };
 
 makeBatmanDancer.prototype = Object.create(makeDancer.prototype);
 makeBatmanDancer.prototype.constructor = makeBatmanDancer;
 makeBatmanDancer.prototype.lineUp = function() {
-  this.setPosition(top, 500);
+  this.setPosition($('body').height() * .70, this.left);
 };

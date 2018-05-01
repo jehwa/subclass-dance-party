@@ -3,39 +3,54 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url('https://i.pinimg.com/originals/31/be/17/31be17e563ac66d77d8c566526ebb71b.jpg');
+  background-image: url('https://i.pinimg.com/originals/62/bf/84/62bf84421129971b4d7cd686f1169814.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%; 
   font-size: 18px;
+  overflow: hidden;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .interactButton, .lineUpButton{
   padding:5px 12px;
   float:right;
 }
 .topbar{
   height:32px;
   background-color: #555;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .title{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute; 
+  width: 100px;
+  height: 140px;
+  position: fixed;
+  content: url(https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/59a3954f16d44388b10ff0a71c172aa6_Large.png); 
 }
 .batmanDancer{
-  width: 50px;
-  height: 70px;
-  position: absolute;
-  content: url(https://www.lego.com/r/www/r/catalogs/-/media/catalogs/characters/lbm%20characters/primary/70900_1to1_batman_360_480.png?l.r=1668006940);
+  width: 100px;
+  height: 140px;
+  position: fixed;
+  content: url(https://vignette.wikia.nocookie.net/forrestfire/images/d/d1/Batman.png/revision/latest?cb=20110627025635);
 }
 .triangleDancer{
-  border-left: 30px solid transparent;
-  border-right: 30px solid transparent;
-  border-bottom: 50px solid green;
-  position:absolute; 
+  width: 130px;
+  height: 140px;
+  position: fixed;
+  content: url(http://shop.kiddiwinks.co.za/image/cache/catalog/products/70906_alt9-800x600.png)
+}
+.jokerDancer {
+  width: 100px;
+  height: 140px;
+  position: fixed;
+  content: url(https://www.thedailybrick.co.uk/media/catalog/product/cache/1/image/700x700/9df78eab33525d08d6e5fb8d27136e95/b/0/b006l3f3mu.png);
+}
+.harleyDancer {
+  width: 130px;
+  height: 140px;
+  position: fixed;
+  content: url(https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/28c070a453ba40eba93af39ae19db91e_Large.png);
 }

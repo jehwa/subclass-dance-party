@@ -13,14 +13,14 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps, className) {
     // 
     if (this.move) {
       this.$node.animate({
-        width: '50px',
+        width: '300px',
         // border: '50px solid red',
         borderRadius: '50px',
       }, 100);
       
     } else {
       this.$node.animate({
-        width: '10px',
+        width: '50px',
         borderRadius: '10px',
       }, 100);
     }
@@ -32,5 +32,5 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps, className) {
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
 makeBlinkyDancer.prototype.lineUp = function() {
-  this.setPosition(top, 90);
+  this.setPosition($('body').height() * .70, this.left);
 };
