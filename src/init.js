@@ -20,7 +20,7 @@ $(document).ready(function() {
     console.log(dancerMakerFunctionName);
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    console.log(dancerMakerFunction);
+    // console.log(dancerMakerFunction);
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
@@ -28,13 +28,34 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    console.log(dancer);
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
   $('.lineUpButton').on('click', function(event) {
+    console.log(window.dancers);
     window.dancers.forEach(function(dancer) {
       dancer.lineUp();
     });
+  });
+  
+  $('.interactButton').on('click', function(event) {
+    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+    var dancerMakerFunction = window[dancerMakerFunctionName];
+    for (let i = 0; i < window.dancers.length; i ++) {
+      for (let j = i + 1; j < window.dancers.length; j ++) {
+        var distance = Math.sqrt(Math.pow((window.dancers[i].top - window.dancers[j].top), 2) + Math.pow((window.dancers[i].left - window.dancers[j].left), 2));
+        if (distance <= 100) {
+          window.dancers[i].$node.remove();
+          window.dancers[j].$node.remove();
+          window.dancers[i] = new makeJokerDancer(window.dancers[i].top, window.dancers[i].left, 1000, 'jokerDancer');
+          $('body').append(window.dancers[i].$node);
+          window.dancers[j] = new makeJokerDancer(window.dancers[j].top, window.dancers[j].left, 1000, 'jokerDancer');
+          $('body').append(window.dancers[j].$node);
+          
+        }
+      }
+    }
   });
 });
 

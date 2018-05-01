@@ -39,3 +39,9 @@ body, a:link, a:visited, a:active{
   border-bottom: 50px solid green;
   position:absolute; 
 }
+.jokerDancer {
+  width: 50px;
+  height: 70px;
+  position: absolute;
+  content: url(https://www.lego.com/r/www/r/catalogs/-/media/catalogs/characters/lbm%20characters/primary/70908_1to1_joker_360_480.png?l.r=1676911513);
+}
