@@ -16,13 +16,16 @@ var makeTriangleDancer = function(top, left, timeBetweenSteps, className) {
     // console.log(this.$node);
     
     this.$node.animate({
-      height: "25%",
+      height: '25%',
     });
     this.$node.animate({
-      height: "-25%",
+      height: '-25%',
     });
   };
 };
 
 makeTriangleDancer.prototype = Object.create(makeDancer.prototype);
 makeTriangleDancer.prototype.constructor = makeTriangleDancer;
+makeTriangleDancer.prototype.lineUp = function() {
+  this.setPosition(top, 200);
+};

@@ -1,6 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps, className) {
 
-  makeDancer.call(this, top, left, timeBetweenSteps,'dancer');
+  makeDancer.call(this, top, left, timeBetweenSteps, 'dancer');
 
   this.oldStep = this.step;
   this.step = function() {
@@ -19,3 +19,6 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps, className) {
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeBlinkyDancer.prototype.lineUp = function() {
+  this.setPosition(top, 90);
+};

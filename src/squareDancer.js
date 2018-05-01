@@ -24,4 +24,6 @@ var makeSquareDancer = function(top, left, timeBetweenSteps, className) {
 
 makeSquareDancer.prototype = Object.create(makeDancer.prototype);
 makeSquareDancer.prototype.constructor = makeSquareDancer;
-
+makeSquareDancer.prototype.lineUp = function() {
+  this.setPosition(top, 500);
+};
