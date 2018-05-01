@@ -3,7 +3,7 @@ var makeSquareDancer = function(top, left, timeBetweenSteps, className) {
   
   this.oldStep = this.step;
   // this.$node = $('<span class="squareDancer"></span>');
-  
+  this.left = true;
   this.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
     this.oldStep();
@@ -15,10 +15,21 @@ var makeSquareDancer = function(top, left, timeBetweenSteps, className) {
     // other effects you can use on a jQuery-wrapped html tag.
     // console.log(this.$node);
     
-    this.$node.animate({
-      left: ['toggle', 'swing'],
-      right: ['toggle', 'swing'],
-    }, 100);
+    //   this.$node.animate({
+    //     left: ['toggle', 'swing'],
+    //     right: ['toggle', 'swing'],
+    //   }, 100);
+
+    if (this.left) {
+      this.$node.animate({
+        top: '+=10%'
+      });
+    } else {
+      this.$node.animate({
+        top: '-=10%'
+      });
+    }
+    this.left = !this.left;
   };
 };
 

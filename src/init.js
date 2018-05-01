@@ -32,7 +32,6 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
   $('.lineUpButton').on('click', function(event) {
-    console.log(window.dancers);
     window.dancers.forEach(function(dancer) {
       dancer.lineUp();
     });
