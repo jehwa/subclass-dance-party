@@ -21,5 +21,5 @@ var makeTriangleDancer = function(top, left, timeBetweenSteps, className) {
 makeTriangleDancer.prototype = Object.create(makeDancer.prototype);
 makeTriangleDancer.prototype.constructor = makeTriangleDancer;
 makeTriangleDancer.prototype.lineUp = function() {
-  this.setPosition(top, 200);
+  this.setPosition($('body').height() * .70, this.left);
 };

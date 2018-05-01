@@ -11,11 +11,11 @@ var makeBatmanDancer = function(top, left, timeBetweenSteps, className) {
 
     if (this.move) {
       this.$node.animate({
-        top: '+=10%'
+        left: '+=10%'
       });
     } else {
       this.$node.animate({
-        top: '-=10%'
+        left: '-=10%'
       });
     }
     this.move = !this.move;
@@ -25,5 +25,5 @@ var makeBatmanDancer = function(top, left, timeBetweenSteps, className) {
 makeBatmanDancer.prototype = Object.create(makeDancer.prototype);
 makeBatmanDancer.prototype.constructor = makeBatmanDancer;
 makeBatmanDancer.prototype.lineUp = function() {
-  this.setPosition(top, 500);
+  this.setPosition($('body').height() * .70, this.left);
 };

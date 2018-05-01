@@ -1,5 +1,5 @@
-var makeJokerDancer = function(top, left, timeBetweenSteps, className) {
-  makeDancer.call(this, top, left, timeBetweenSteps, 'jokerDancer');
+var makeHarleyDancer = function(top, left, timeBetweenSteps, className) {
+  makeDancer.call(this, top, left, timeBetweenSteps, 'harleyDancer');
   
   this.oldStep = this.step;
 
@@ -22,8 +22,8 @@ var makeJokerDancer = function(top, left, timeBetweenSteps, className) {
   };
 };
 
-makeJokerDancer.prototype = Object.create(makeDancer.prototype);
-makeJokerDancer.prototype.constructor = makeJokerDancer;
-makeJokerDancer.prototype.lineUp = function() {
-  this.setPosition(600, left);
+makeHarleyDancer.prototype = Object.create(makeDancer.prototype);
+makeHarleyDancer.prototype.constructor = makeHarleyDancer;
+makeHarleyDancer.prototype.lineUp = function() {
+  this.setPosition(top, 500);
 };
