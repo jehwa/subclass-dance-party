@@ -1,8 +1,9 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps, className) {
-
-  makeDancer.call(this, top, left, timeBetweenSteps,'dancer');
-
+var makeSquareDancer = function(top, left, timeBetweenSteps, className) {
+  makeDancer.call(this, top, left, timeBetweenSteps, 'squareDancer');
+  
   this.oldStep = this.step;
+  // this.$node = $('<span class="squareDancer"></span>');
+  
   this.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
     this.oldStep();
@@ -13,9 +14,14 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps, className) {
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
     // console.log(this.$node);
-    this.$node.toggle();
+    
+    this.$node.animate({
+      left: ["toggle", "swing"],
+      right: ["toggle", "swing"],
+    }, 100);
   };
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeSquareDancer.prototype = Object.create(makeDancer.prototype);
+makeSquareDancer.prototype.constructor = makeSquareDancer;
+
