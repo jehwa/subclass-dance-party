@@ -29,7 +29,12 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    // $('body').append(squaredancer.$node);
+    window.dancers.push(dancer);
+  });
+  $('.lineUpButton').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.lineUp();
+    });
   });
 });
 

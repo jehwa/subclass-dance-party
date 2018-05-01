@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('https://i.pinimg.com/originals/31/be/17/31be17e563ac66d77d8c566526ebb71b.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -26,8 +28,10 @@ body, a:link, a:visited, a:active{
   position:absolute; 
 }
 .squareDancer{
-  border: 20px solid yellow;
+  width: 50px;
+  height: 70px;
   position: absolute;
+  content: url(https://www.lego.com/r/www/r/catalogs/-/media/catalogs/characters/lbm%20characters/primary/70900_1to1_batman_360_480.png?l.r=1668006940);
 }
 .triangleDancer{
   border-left: 30px solid transparent;
