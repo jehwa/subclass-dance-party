@@ -16,8 +16,8 @@ var makeSquareDancer = function(top, left, timeBetweenSteps, className) {
     // console.log(this.$node);
     
     this.$node.animate({
-      left: ["toggle", "swing"],
-      right: ["toggle", "swing"],
+      left: ['toggle', 'swing'],
+      right: ['toggle', 'swing'],
     }, 100);
   };
 };
