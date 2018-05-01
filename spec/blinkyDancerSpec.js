@@ -1,4 +1,4 @@
-describe('blinkyDancer', function() {
+describe('stretchyDancer', function() {
 
   var blinkyDancer, clock;
   var timeBetweenSteps = 100;
@@ -12,10 +12,10 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(blinkyDancer.$node, 'toggle');
+  it('should have a step function that makes its node stretchy', function() {
+    sinon.spy(blinkyDancer.$node, 'animate');
     blinkyDancer.step();
-    expect(blinkyDancer.$node.toggle.called).to.be.true;
+    expect(blinkyDancer.$node.animate.called).to.be.true;
   });
 
   describe('dance', function() {
