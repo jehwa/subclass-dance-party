@@ -27,5 +27,11 @@ body, a:link, a:visited, a:active{
 }
 .squareDancer{
   border: 20px solid yellow;
+  position: absolute;
+}
+.triangleDancer{
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 50px solid green;
   position:absolute; 
 }
